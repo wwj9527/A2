@@ -5,16 +5,20 @@ public class StockPrice implements Serializable {
 
   private String symbol;
   private double pri;
-  private double change;
+  private double charge;
+    private int pointer;
+    private String yuan;
+    private String name;
+
 
 
 	public StockPrice() {
 	}
 
-	public StockPrice(String symbol, double pri, double change) {
+	public StockPrice(String symbol, double pri, double charge) {
 		this.symbol = symbol;
 		this.pri = pri;
-		this.change = change;
+		this.charge = charge;
 	}
 
 	public String getSymbol() {
@@ -26,11 +30,11 @@ public class StockPrice implements Serializable {
 	}
 
 	public double getChange() {
-		return this.change;
+		return this.charge;
 	}
 
 	public double getChangePercent() {
-		return 100.0 * this.change / this.pri;
+		return 100.0 * this.charge / this.pri;
 	}
 
 	public void setSymbol(String symbol) {
@@ -41,7 +45,7 @@ public class StockPrice implements Serializable {
 		this.pri = pri;
 	}
 
-	public void setChange(double change) {
-		this.change = change;
+	public void setChange(double charge) {
+		this.charge = charge;
 	}
 }
