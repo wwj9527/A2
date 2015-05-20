@@ -48,6 +48,7 @@ public class StockWatcher implements EntryPoint {
 	private Anchor signOutLink = new Anchor("Sign Out");
 	private final StockServiceAsync stockService = GWT
 			.create(StockService.class);
+	private int myfriend = 90;
 
 	public void onModuleLoad() {
 		// Check login status using login service.
@@ -162,6 +163,7 @@ public class StockWatcher implements EntryPoint {
 	private void displayStocks(String[] symbols) {
 		for (String symbol : symbols) {
 			displayStock(symbol);
+			myfriend++;
 		}
 	}
 
