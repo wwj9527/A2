@@ -41,7 +41,6 @@ public class StockWatcher implements EntryPoint {
 			.create(StockPriceService.class);
 	private Label errorMsgLabel = new Label();
 	private LoginInfo loginInfo = null;
-    private int myfriend;
 	private VerticalPanel loginPanel = new VerticalPanel();
 	private Label loginLabel = new Label(
 			"Please sign in to your Google Account to access the StockWatcher application.");
@@ -49,7 +48,6 @@ public class StockWatcher implements EntryPoint {
 	private Anchor signOutLink = new Anchor("Sign Out");
 	private final StockServiceAsync stockService = GWT
 			.create(StockService.class);
-	private int myfriend = 90;
 
 	public void onModuleLoad() {
 		// Check login status using login service.
@@ -164,7 +162,6 @@ public class StockWatcher implements EntryPoint {
 	private void displayStocks(String[] symbols) {
 		for (String symbol : symbols) {
 			displayStock(symbol);
-			myfriend++;
 		}
 	}
 
