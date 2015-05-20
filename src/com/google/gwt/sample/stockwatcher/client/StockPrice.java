@@ -4,16 +4,16 @@ import java.io.Serializable;
 public class StockPrice implements Serializable {
 
   private String symbol;
-  private double price;
+  private double pri;
   private double change;
 
 
 	public StockPrice() {
 	}
 
-	public StockPrice(String symbol, double price, double change) {
+	public StockPrice(String symbol, double pri, double change) {
 		this.symbol = symbol;
-		this.price = price;
+		this.pri = pri;
 		this.change = change;
 	}
 
@@ -22,7 +22,7 @@ public class StockPrice implements Serializable {
 	}
 
 	public double getPrice() {
-		return this.price;
+		return this.pri;
 	}
 
 	public double getChange() {
@@ -30,15 +30,15 @@ public class StockPrice implements Serializable {
 	}
 
 	public double getChangePercent() {
-		return 100.0 * this.change / this.price;
+		return 100.0 * this.change / this.pri;
 	}
 
 	public void setSymbol(String symbol) {
 		this.symbol = symbol;
 	}
 
-	public void setPrice(double price) {
-		this.price = price;
+	public void setPrice(double pri) {
+		this.pri = pri;
 	}
 
 	public void setChange(double change) {
